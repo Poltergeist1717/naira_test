@@ -1,0 +1,21 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'test_app/generated.css' %}">
+        <script src="{% static 'test_app/base.js' %}"></script>
+
+        {% if title %}
+        <title>Naira - {{ title }} </title>
+        {% else %}
+        <title> Naira </title>
+        {% endif %}
+    </head>
+    <body>
+        <section>
+            {% block first %} {% endblock first %}
+        </section>
+    </body>
+</html>
